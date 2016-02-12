@@ -1,5 +1,7 @@
-require 'pray/version'
+require 'pry'
 
 # Prayerfully interact with Ruby
-module Pray
+class Pry
+  Pry.send(:remove_const, :DEFAULT_PROMPT_NAME)
+  Pry::DEFAULT_PROMPT_NAME = 'pray'.freeze
 end
